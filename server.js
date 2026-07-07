@@ -70,7 +70,7 @@ async function startBot() {
                 qrCode = null;
                 io.emit('status', { connected: false, qrCode: null });
                 console.log('Koneksi ditutup, mencoba menghubung kembali...');
-                startBot();
+                setTimeout(startBot, 5000);
             }
             if (update.connection === 'open') {
                 isConnected = true;
@@ -145,5 +145,5 @@ startBot();
 // Port dari environment atau default 3000
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-    console.log(`Server berjalan di http://localhost:${PORT}`);
+    console.log(`🚀 Server berjalan di http://localhost:${PORT}`);
 });
