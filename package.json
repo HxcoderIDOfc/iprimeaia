@@ -1,13 +1,18 @@
 {
   "name": "iprimeaia",
   "version": "1.0.0",
-  "description": "",
+  "description": "WhatsApp Bot powered by IprimeAI",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [],
+  "keywords": ["whatsapp", "bot", "ai"],
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.0.0",
+    "pino": "^8.0.0",
+    "node-fetch": "^2.6.0",
+    "dotenv": "^16.0.0"
+  }
 }
