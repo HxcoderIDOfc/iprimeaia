@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IprimeAI WhatsApp Bot - Control Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 IprimeAI WhatsApp Bot</h1>
+            <div class="status-badge" id="statusBadge">
+                <span class="status-dot"></span>
+                Terputus
+            </div>
+        </header>
+
+        <main>
+            <!-- QR Code Section -->
+            <section class="qr-section">
+                <h2>📱 QR Code Scan</h2>
+                <div class="qr-container" id="qrContainer">
+                    <div id="qrDisplay" class="qr-display"></div>
+                    <p id="qrStatus" class="qr-status">Menunggu QR Code...</p>
+                </div>
+                <p class="info-text">Scan QR Code ini dengan WhatsApp untuk menghubungkan akun Anda</p>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <h3>Status Koneksi</h3>
+                    <p id="connectionStatus" class="stat-value">Terputus</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pesan Masuk</h3>
+                    <p id="incomingCount" class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pesan Keluar</h3>
+                    <p id="outgoingCount" class="stat-value">0</p>
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section class="messages-section">
+                <h2>💬 Activity Log</h2>
+                <div class="messages-container" id="messagesContainer">
+                    <p class="empty-message">Menunggu pesan...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>IprimeAI WhatsApp Bot v1.0 | Session Disimpan Otomatis</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
